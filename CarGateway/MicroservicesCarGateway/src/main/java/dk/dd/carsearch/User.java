@@ -7,8 +7,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Data
-public class User implements Serializable {
-    @Id
+public class User {
     private String id;
     @NonNull private String name;
     @NonNull List<Rating> ratings;

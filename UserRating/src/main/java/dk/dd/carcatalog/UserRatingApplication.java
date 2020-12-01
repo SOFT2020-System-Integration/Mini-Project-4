@@ -36,14 +36,14 @@ public class UserRatingApplication implements CommandLineRunner {
         List<Rating> l3 = new ArrayList<>();
         List<Rating> l4 = new ArrayList<>();
 
-        Rating r1 = new Rating(null, 1L, 10);
-        Rating r2 = new Rating(null, 2L, 6);
-        Rating r3 = new Rating(null, 3L, 7);
-        Rating r4 = new Rating(null, 4L, 4);
-        Rating r5 = new Rating(null, 5L, 1);
-        Rating r6 = new Rating(null, 6L, 4);
-        Rating r7 = new Rating(null, 7L, 8);
-        Rating r8 = new Rating(null, 8L, 10);
+        Rating r1 = new Rating("1", 1L, 10);
+        Rating r2 = new Rating("2", 2L, 6);
+        Rating r3 = new Rating("3", 3L, 7);
+        Rating r4 = new Rating("4", 4L, 4);
+        Rating r5 = new Rating("5", 5L, 1);
+        Rating r6 = new Rating("6", 6L, 4);
+        Rating r7 = new Rating("7", 7L, 8);
+        Rating r8 = new Rating("8", 8L, 10);
 
         l1.add(r1);
         l1.add(r2);
