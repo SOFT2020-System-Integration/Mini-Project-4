@@ -13,11 +13,10 @@ import java.util.stream.Collectors;
 @RestController
 public class CarSearchController
 {
-    private CarSearchClient carClient = null;
+   private CarSearchClient client;
 
-    public CarSearchController(CarSearchClient carClient)
-    {
-        this.carClient = carClient;
+    public CarSearchController(dk.dd.carsearch.CarSearchClient client) {
+        this.client = client;
     }
 
     @GetMapping("/mycars")
@@ -26,7 +25,7 @@ public class CarSearchController
     @HystrixCommand(fallbackMethod = "fallback") // in case of failure
     public Collection<Car> myCars()
     {
-        return carClient.readCars()
+        return client.readCars()
                 .getContent()
                 .stream()
                 .filter(this :: isMine)

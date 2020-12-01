@@ -31,7 +31,7 @@ public class UserRatingApplication implements CommandLineRunner {
 
         Rating r = new Rating(1L, 10);
         l.add(r);
-        User u = new User("Hej", "Andreas");
+        User u = new User("", "Andreas", l);
         u.setRatings(l);
 
         repo.save(u);

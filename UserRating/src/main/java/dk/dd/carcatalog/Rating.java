@@ -1,10 +1,13 @@
 package dk.dd.carcatalog;
 
 import org.springframework.data.annotation.Id;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import java.io.Serializable;
 
 public class Rating implements Serializable {
-    @Id
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
     private Long carID;
     private int rating;
