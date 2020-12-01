@@ -18,7 +18,7 @@ public class UserSearchController {
         this.client = client;
     }
 
-    @GetMapping("/myusers/{name}")
+    @GetMapping("/ratings/{name}")
     @ResponseBody
     @CrossOrigin(origins = "*") // allow request from any client
 
@@ -32,8 +32,16 @@ public class UserSearchController {
         return collect;
     }
 
-    private Collection<User> fallback()
+    @GetMapping("/ratings")
+    @ResponseBody
+    @CrossOrigin(origins = "*") // allow request from any client
+
+    public Collection<User> myUser()
     {
-        return new ArrayList<>();
+        List<User> collect = client.readUsers()
+                .getContent()
+                .stream()
+                .collect(Collectors.toList());
+        return collect;
     }
 }
