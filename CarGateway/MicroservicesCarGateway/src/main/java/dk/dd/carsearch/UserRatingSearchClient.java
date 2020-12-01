@@ -14,5 +14,4 @@ public interface UserRatingSearchClient
     @GetMapping("/users")
     Resources<User> readUsers();
 
-
 }

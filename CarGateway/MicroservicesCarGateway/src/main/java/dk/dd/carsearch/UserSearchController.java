@@ -1,13 +1,12 @@
 package dk.dd.carsearch;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 
@@ -19,24 +18,24 @@ public class UserSearchController {
         this.client = client;
     }
 
-    @GetMapping("/myusers")
+    @GetMapping("/myusers/{name}")
     @ResponseBody
     @CrossOrigin(origins = "*") // allow request from any client
-    @HystrixCommand(fallbackMethod = "fallback") // in case of failure
-    public Collection<User> myUser()
+
+    public Collection<User> myUser(@PathVariable String name)
     {
-        return client.readUsers()
+        List<User> collect = client.readUsers()
                 .getContent()
                 .stream()
-                .filter(this :: isMine)
+                .filter(User -> User.getName().equals(name))
                 .collect(Collectors.toList());
+        return collect;
     }
-
 
 
     private boolean isMine(User user)
     {
-        return  user.getName().equals("Bobby Jones");
+        return  user.getName().equals("Jaxtor2");
     }
 
     private Collection<User> fallback()

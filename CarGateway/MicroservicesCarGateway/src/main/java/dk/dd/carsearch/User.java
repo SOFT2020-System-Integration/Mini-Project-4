@@ -22,6 +22,11 @@ public class User implements Serializable {
         this.ratings = ratings;
     }
 
+    public User(String id, @NonNull String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public String getId() {
         return id;
     }

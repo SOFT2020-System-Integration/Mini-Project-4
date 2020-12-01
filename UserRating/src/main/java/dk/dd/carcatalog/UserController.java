@@ -15,7 +15,7 @@ import static org.springframework.data.mongodb.core.query.Criteria.where;
 //@RepositoryRestController
 @RepositoryRestResource
 @ResponseBody
-//@RestController
+@RestController
 @RequestMapping("/users")
 public class UserController
 {
@@ -32,7 +32,7 @@ public class UserController
     }
 
     @GetMapping("/{name}")
-    public dk.dd.carcatalog.User findByName(@PathVariable String name)
+    public dk.dd.carcatalog.User findByBrand(@PathVariable String name)
     {
         return repo.findByName(name);
     }
