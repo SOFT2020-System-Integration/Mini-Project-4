@@ -9,21 +9,16 @@ import java.util.List;
 @Data
 public class User {
     private String id;
-    @NonNull private String name;
-    @NonNull List<Rating> ratings;
+    private String name;
+    private List<Rating> ratings;
 
     public User() {
     }
 
-    public User(String id, @NonNull String name, @NonNull List<Rating> ratings) {
+    public User(String id, String name, List<Rating> ratings) {
         this.id = id;
         this.name = name;
         this.ratings = ratings;
-    }
-
-    public User(String id, @NonNull String name) {
-        this.id = id;
-        this.name = name;
     }
 
     public String getId() {
