@@ -10,23 +10,17 @@ public class Rating implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
-    private Long carID;
-    private int rating;
+    private String brand;
+    private String note;
+    private Stars rating;
 
-    public Rating(String id, Long carID, int rating) {
-        this.id = id;
-        this.carID = carID;
-        this.rating = rating;
+    public Rating() {
     }
 
-    public Rating(Long carID, int rating) {
-        this.carID = carID;
+    public Rating(String brand, String note, Stars rating) {
+        this.brand = brand;
+        this.note = note;
         this.rating = rating;
-    }
-
-    public Rating()
-    {
-
     }
 
     public String getId() {
@@ -37,19 +31,27 @@ public class Rating implements Serializable {
         this.id = id;
     }
 
-    public Long getCarID() {
-        return carID;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setCarID(Long carID) {
-        this.carID = carID;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
-    public int getRating() {
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public Stars getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(Stars rating) {
         this.rating = rating;
     }
 }
