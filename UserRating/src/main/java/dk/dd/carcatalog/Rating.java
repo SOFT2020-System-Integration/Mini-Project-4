@@ -7,10 +7,17 @@ import javax.persistence.GenerationType;
 import java.io.Serializable;
 
 public class Rating implements Serializable {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
     private Long carID;
     private int rating;
+
+    public Rating(String id, Long carID, int rating) {
+        this.id = id;
+        this.carID = carID;
+        this.rating = rating;
+    }
 
     public Rating(Long carID, int rating) {
         this.carID = carID;

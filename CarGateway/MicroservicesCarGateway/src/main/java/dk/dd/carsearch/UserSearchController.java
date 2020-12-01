@@ -32,12 +32,6 @@ public class UserSearchController {
         return collect;
     }
 
-
-    private boolean isMine(User user)
-    {
-        return  user.getName().equals("Jaxtor2");
-    }
-
     private Collection<User> fallback()
     {
         return new ArrayList<>();

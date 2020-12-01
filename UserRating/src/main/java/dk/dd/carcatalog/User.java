@@ -14,22 +14,21 @@ import java.util.List;
 
 
 @Data
-@RequiredArgsConstructor
 @Document(collection = "users")
 public class User  {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @NonNull private String id;
-    @NonNull private String name;
+    private String id;
+    private String name;
     private List<Rating> ratings;
 
-    public User() {
-    }
-
-    public User(@NonNull String id, @NonNull String name, List<Rating> ratings) {
+    public User(String id, String name, List<Rating> ratings) {
         this.id = id;
         this.name = name;
         this.ratings = ratings;
+    }
+
+    public User() {
     }
 
     public String getId() {
