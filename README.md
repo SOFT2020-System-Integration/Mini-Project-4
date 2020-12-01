@@ -16,9 +16,9 @@ Deploy your microservices application in Kubernetes and explore its behaviour.
 ##Info
 
 #### APIGateway* is the gateway that connects both the `CarCatalog` & `UserRating` so both  of their api's can be called through one program.  
-`CarsCatalog API` : `localhost:8090/cars`
-`UserRating API` : `localhost:5000/users` && `localhost:5000/users/{name of user}`  
-`ApiGateway API` : *Cars:* `localhost:8080/cars` & `localhost:8080/cars/{brandname}` *Ratings*   
+- `CarsCatalog API` : `localhost:8090/cars`
+- `UserRating API` : `localhost:5000/users` && `localhost:5000/users/{name of user}`  
+- `ApiGateway API` : *Cars:* `localhost:8080/cars` & `localhost:8080/cars/{brandname}` *Ratings*   
 
 ## Setup
 What you'll need:
