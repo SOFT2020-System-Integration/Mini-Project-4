@@ -2,7 +2,7 @@
 - Andeas Jørgensen 
 - Jonatan Bakke 
 - Jonas Hein
-- Thomas Ebsen
+- Thomas Ebsen > https://github.com/Srax
 ## Assignment
 Task 1 (10 study points)
 
