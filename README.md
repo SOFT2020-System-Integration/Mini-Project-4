@@ -1,8 +1,9 @@
 # Mini Project-4 Microservices
-- Andeas Jørgensen 
-- Jonatan Bakke 
-- Jonas Hein
-- Thomas Ebsen > https://github.com/Srax
+- Andeas Jørgensen - https://github.com/DDomino
+- Jonatan Bakke https://github.com/JonatanMagnusBakke
+- Jonas Hein - https://github.com/Zenzus
+- Thomas Ebsen - https://github.com/Srax 
+
 ## Assignment
 Task 1 (10 study points)
 
