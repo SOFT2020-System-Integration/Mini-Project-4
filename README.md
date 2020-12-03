@@ -1,6 +1,8 @@
 # Mini Project-4 Microservices
-
-### by Andeas Jørgensen, Jonatan Bakke, Jonas Hein & Thomas  Ebsen
+- Andeas Jørgensen 
+- Jonatan Bakke 
+- Jonas Hein
+- Thomas Ebsen
 ## Assignment
 Task 1 (10 study points)
 
