@@ -16,7 +16,7 @@ Extend the rent-a-car application by adding a new service - user rating of cars.
 Task 2 (10 study points)  
 Deploy your microservices application in Kubernetes and explore its behaviour.
 
-##Info
+## Info
 
 #### APIGateway* is the gateway that connects both the `CarCatalog` & `UserRating` so both  of their api's can be called through one program.  
 - `CarsCatalog API` : `localhost:8090/cars`
