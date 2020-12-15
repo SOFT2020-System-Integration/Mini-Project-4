@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice12
+  labels:
+    app: microservice12
+spec:
+  selector:
+    matchLabels:
+      app: microservice12
+  template:
+    metadata:
+      labels:
+        app: microservice12
+    spec:
+      containers:
+      - name: cargateway-container
+        image: apigatewaycar:1
+
+
+      - name: userrating-container
+        image: userraiting1:1
+
+   
+      - name: microservices-container
+        image: microservices:1
+
+ 
+      - name: carcatalog-container
+        image: carcatalog:1
+
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: microservice12
+spec:
+  type: LoadBalancer
+  selector:
+    app: microservice12
+  ports:
+  - protocol: TCP
+    port: 9080
+    targetPort: 9080
+    nodePort: 31001
