@@ -35,5 +35,5 @@ What you'll need:
 4. When they are all running, you should be able to get ratings and cars from the ApiGateway by querying the ApiGateway api.
 
 ## Kubernetes
-[Kubernetes](kubernetes.png) 
+[Kubernetes] kubernetes.png 
 
