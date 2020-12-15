@@ -36,8 +36,8 @@ What you'll need:
 
   
 ## How to build docker image
-1. docker build -t <name>:<versionnumber> .
-2. mvn package
+1. `docker build -t <name>:<versionnumber> .`
+2. `mvn package`
   
 ## Kubernetes
 
