@@ -33,3 +33,7 @@ What you'll need:
 2. Run `CarCatalog` & `UserRating`
 3. Run `ApiGateway`
 4. When they are all running, you should be able to get ratings and cars from the ApiGateway by querying the ApiGateway api.
+
+## Kubernetes
+[Kubernetes](kubernetes.png) 
+
