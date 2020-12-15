@@ -35,6 +35,7 @@ What you'll need:
 4. When they are all running, you should be able to get ratings and cars from the ApiGateway by querying the ApiGateway api.
 
 ## Kubernetes
-
+docker build -t <name>:<versionnumber> .
+mvn package
 ![Kubernetes](/kubernetes.png)
 
